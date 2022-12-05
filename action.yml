@@ -2,7 +2,7 @@
 name: 'Sending Email'
 description: 'Send notifications to a specified email.'
 inputs:
-  destination-email:  # id of input
+  DESTINATION-EMAIL:  # id of input
     description: 'Destination for sending email to, should be repo/org admin'
     required: true
     default: 'example@gmail.com'
