@@ -1,0 +1,16 @@
+# action.yml
+name: 'Sending Email'
+description: 'Send notifications to a specified email.'
+inputs:
+  destination-email:  # id of input
+    description: 'Destination for sending email to, should be repo/org admin'
+    required: true
+    default: 'example@gmail.com'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.destination-email }}
