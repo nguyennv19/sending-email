@@ -7,4 +7,4 @@ COPY . /app/
 RUN pip install -r requirements.txt
 
 # run crond as main process of container
-CMD ["python3", "send-email.py"]
+CMD ["python3", "/app/send-email.py"]
