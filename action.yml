@@ -6,9 +6,12 @@ inputs:
     description: 'Destination for sending email to, should be repo/org admin'
     required: true
     default: 'example@gmail.com'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  GITHUB_RUNID:
+    description: 'Run ID of the Github workflow job'
+    required: true
+  GITHUB_REPO:
+    description: 'Repo name that runs Github workflow job'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
