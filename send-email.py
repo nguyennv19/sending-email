@@ -8,11 +8,11 @@ port = 465
 smtp_server = "smtp.gmail.com"
 USER_EMAIL = os.environ.get("NOTI_USERNAME")
 USER_PASSWORD = os.environ.get("NOTI_PASS")
-#DESTINATION_EMAIL = os.environ.get("DESTINATION_EMAIL")
+DESTINATION_EMAIL = os.environ.get("DESTINATION_EMAIL")
 
 ##### EMAIL INFO
 from_addr = USER_EMAIL
-to_addr = "dev-ops@whydah.xyz" #DESTINATION_EMAIL
+to_addr = DESTINATION_EMAIL #"dev-ops@whydah.xyz"
 subj = "Failed email checking"
 body = "Dear sir,\nEmail checking rule has been violated!"
 msg = "From: %s\nTo: %s\nSubject: %s\n\n%s" % (from_addr, to_addr, subj, body)
